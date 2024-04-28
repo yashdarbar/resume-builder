@@ -18,9 +18,44 @@ export default function Home(props) {
   }
 
   const [text, setText] = useState("");
+  const [contact, setContact] = useState("");
+  const [education, setEducation] = useState("");
+  const [project, setProject] = useState("");
+  const [languages, setLanguages] = useState("");
+  const [tools, setTools] = useState("");
+  const [frameworks, setFrameworks] = useState("");
+  const [experience, setExperience] = useState("");
 
   const textHandler = (e) => {
-      const data = setText(e.target.value);
+      setText(e.target.value);
+  };
+
+  const contactHandler = (e) => {
+        setContact(e.target.value);
+  };
+
+  const educationHandler = (e) => {
+        setEducation(e.target.value);
+  };
+
+  const languagesHandler = (e) => {
+        setLanguages(e.target.value);
+  };
+
+  const projectHandler = (e) => {
+      setProject(e.target.value);
+  };
+
+  const toolsHandler = (e) => {
+      setTools(e.target.value);
+  };
+
+  const frameworksHandler = (e) => {
+      setFrameworks(e.target.value);
+  };
+
+  const experienceHandler = (e) => {
+    setExperience(e.target.value);
   };
 
   //const data = "Yash"
@@ -146,9 +181,52 @@ export default function Home(props) {
                       ></input>
                       <h1>Contact</h1>
                       <input
-                          value={text}
-                          message={text}
-                          onChange={textHandler}
+                          value={contact}
+                          //value={contact}
+                          //message={text}
+                          onChange={contactHandler}
+                      ></input>
+                      <h1>Education</h1>
+                      <input
+                          value={education}
+                          //value={contact}
+                          //message={text}
+                          onChange={educationHandler}
+                      ></input>
+                      <h1>Projects</h1>
+                      <textarea
+                          value={project}
+                          //value={contact}
+                          //message={text}
+                          onChange={projectHandler}
+                      />
+                      <h1>Languages</h1>
+                      <input
+                          value={languages}
+                          //value={contact}
+                          //message={text}
+                          onChange={languagesHandler}
+                      ></input>
+                      <h1>Frameworkss</h1>
+                      <input
+                          value={frameworks}
+                          //value={contact}
+                          //message={text}
+                          onChange={frameworksHandler}
+                      ></input>
+                      <h1>Tools</h1>
+                      <input
+                          value={tools}
+                          //value={contact}
+                          //message={text}
+                          onChange={toolsHandler}
+                      ></input>
+                      <h1>experience</h1>
+                      <input
+                          value={experience}
+                          //value={contact}
+                          //message={text}
+                          onChange={experienceHandler}
                       ></input>
                   </div>
               </div>
@@ -158,7 +236,17 @@ export default function Home(props) {
           </div>
           <PDFExport ref={pdfconverter} paperSize="A4">
               <h1 className="ml-5 mt-5">My PDF</h1>
-              <h2>Name: {text}</h2>
+              <span className="flex">
+                  <h2>Name: {text}</h2>
+                  <h2>Contact: {contact}</h2>
+              </span>
+              <h2>Education: {education}</h2>
+              <h2>Projects: {project}</h2>
+              <h2>Languages: {languages}</h2>
+              <h2>Frameworks: {frameworks}</h2>
+              <h2>Tools: {tools}</h2>
+              <h2>Experience: {experience}</h2>
+
               <p>lorem lafaljf ksdj i wnat to go to himalays</p>
               <div></div>
           </PDFExport>
