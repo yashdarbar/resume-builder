@@ -8,6 +8,7 @@ import { Button } from "@progress/kendo-react-buttons";
 import { useRef, useState } from "react";
 import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 import Resume from "./Resume/page";
+import "./page.css";
 
 export default function Home(props) {
     const pdfconverter = useRef(null);
@@ -166,16 +167,17 @@ export default function Home(props) {
         //     </a>
         //   </div>
         // </main>
-        <div className="flex text-black bg-white h-screen font-semibold w-full">
-            <div className="w-1/2 justify-center flex flex-col">
-                <div className="mx-auto">
-                    <h1>Add details</h1>
-                    <div>
+        <div className="flex text-black bg-white font-semibold w-full">
+            <div className="w-1/2 flex flex-col mt-10 min-h-screen max-h-fit mb-8       ">
+                <div className="mx-auto ">
+                    <h1 className="text-center text-2xl mb-5">Add details</h1>
+                    <div className="w-96">
                         <h1>Name</h1>
                         <input
                             value={text}
                             message={text}
                             onChange={textHandler}
+                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
                         ></input>
                         <h1>Contact</h1>
                         <input
@@ -183,6 +185,7 @@ export default function Home(props) {
                             //value={contact}
                             //message={text}
                             onChange={contactHandler}
+                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
                         ></input>
                         <h1>Education</h1>
                         <input
@@ -190,6 +193,7 @@ export default function Home(props) {
                             //value={contact}
                             //message={text}
                             onChange={educationHandler}
+                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
                         ></input>
                         <h1>Projects</h1>
                         <textarea
@@ -197,6 +201,7 @@ export default function Home(props) {
                             //value={contact}
                             //message={text}
                             onChange={projectHandler}
+                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
                         />
                         <h1>Languages</h1>
                         <input
@@ -204,6 +209,7 @@ export default function Home(props) {
                             //value={contact}
                             //message={text}
                             onChange={languagesHandler}
+                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
                         ></input>
                         <h1>Frameworkss</h1>
                         <input
@@ -211,6 +217,7 @@ export default function Home(props) {
                             //value={contact}
                             //message={text}
                             onChange={frameworksHandler}
+                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
                         ></input>
                         <h1>Tools</h1>
                         <input
@@ -218,6 +225,7 @@ export default function Home(props) {
                             //value={contact}
                             //message={text}
                             onChange={toolsHandler}
+                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
                         ></input>
                         <h1>experience</h1>
                         <input
@@ -225,32 +233,43 @@ export default function Home(props) {
                             //value={contact}
                             //message={text}
                             onChange={experienceHandler}
+                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
                         ></input>
                     </div>
+                    <Button
+                        className="w-fit mt-5"
+                        onClick={handler}
+                        primary={true}
+                    >
+                        Primary Button
+                    </Button>
                 </div>
-                <Button
-                    className="w-fit mt-6 mx-auto"
+                {/* <Button
+                    className="w-fit mt-6"
                     onClick={handler}
                     primary={true}
                 >
                     Primary Button
-                </Button>
+                </Button> */}
             </div>
-            <PDFExport ref={pdfconverter} paperSize="A4">
-                <h1 className="ml-5 mt-5">My PDF</h1>
-                <span className="flex">
-                    <h2>Name: {text}</h2>
-                    <h2>Contact: {contact}</h2>
-                </span>
-                <h2>Education: {education}</h2>
-                <h2>Projects: {project}</h2>
-                <h2>Languages: {languages}</h2>
-                <h2>Frameworks: {frameworks}</h2>
-                <h2>Tools: {tools}</h2>
-                <h2>Experience: {experience}</h2>
-                <p>lorem lafaljf ksdj i wnat to go to himalays</p>
-                <div></div>
-            </PDFExport>
+            <div className="flex flex-col text-left text-black  mt-10 min-h-screen max-h-fit w-1/2">
+                <h1 className="text-center text-2xl mb-5">Resume</h1>
+                <PDFExport ref={pdfconverter} paperSize="A4" class="container">
+                    <div className="mx-6 my-5">
+                        <span className="">
+                            <h2>Name: {text}</h2>
+                            <h2>Contact: {contact}</h2>
+                        </span>
+                        <h2>Education: {education}</h2>
+                        <h2>Projects: {project}</h2>
+                        <h2>Languages: {languages}</h2>
+                        <h2>Frameworks: {frameworks}</h2>
+                        <h2>Tools: {tools}</h2>
+                        <h2>Experience: {experience}</h2>
+                        <p>lorem lafaljf ksdj i wnat to go to himalays</p>
+                    </div>
+                </PDFExport>
+            </div>
 
             {/* <Resume data={data}/> */}
         </div>
