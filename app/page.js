@@ -255,9 +255,9 @@ export default function Home(props) {
             <div className="flex flex-col text-left text-black  mt-10 min-h-screen max-h-fit w-1/2">
                 <h1 className="text-center text-2xl mb-5">Resume</h1>
                 <PDFExport ref={pdfconverter} paperSize="A4" class="container">
-                    <div className="mx-6 my-5">
+                    <div className="mx-6 my-5  text-sm ">
                         <span className="">
-                            <h2>Name: {text}</h2>
+                            <h2 className="text-2xl">{text}</h2>
                             <h2>Contact: {contact}</h2>
                         </span>
                         <h2>Education: {education}</h2>
