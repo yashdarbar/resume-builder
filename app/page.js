@@ -177,12 +177,17 @@ export default function Home(props) {
         //     </a>
         //   </div>
         // </main>
-        <div className="flex justify-center ">
-            <div className="justify-center h">
+        <div className="h-screen w-full flex bg-violet-400 justify-center items-center ">
+            <div className="text-xl font-semibold flex flex-col">
                 <h1>MAKE YOUR RESUME HERE! BY THE HELP OF RESUNATOR!</h1>
-                <h2>
+                {/* <h2 className="flex justify-center p-4 bg-white text-black ">
                     <Link href={"/Resume"}>Create Resume</Link>
-                </h2>
+                </h2> */}
+                <Button
+                    className=" mx-auto mt-1 text-center"
+                >
+                    <Link href={"/Resume"}>Create Resume</Link>
+                </Button>
             </div>
         </div>
     );
