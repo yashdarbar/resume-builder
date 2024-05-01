@@ -18,12 +18,14 @@ export default function Home(props) {
 
     const [text, setText] = useState("");
     const [contact, setContact] = useState("");
+    const [contactTwo, setContactTwo] = useState("");
     const [education, setEducation] = useState("");
     const [project, setProject] = useState("");
     const [languages, setLanguages] = useState("");
     const [tools, setTools] = useState("");
     const [frameworks, setFrameworks] = useState("");
     const [experience, setExperience] = useState("");
+    const [links, setLinks] = useState("");
 
     const textHandler = (e) => {
         setText(e.target.value);
@@ -31,6 +33,11 @@ export default function Home(props) {
 
     const contactHandler = (e) => {
         setContact(e.target.value);
+
+    };
+
+    const contactHandlerTwo = (e) => {
+        setContactTwo(e.target.value);
     };
 
     const educationHandler = (e) => {
@@ -56,6 +63,10 @@ export default function Home(props) {
     const experienceHandler = (e) => {
         setExperience(e.target.value);
     };
+
+    const linksHandler = (e) => {
+        setLinks(e.target.value);
+    }
 
     //const data = "Yash"
 
@@ -168,76 +179,93 @@ export default function Home(props) {
         //   </div>
         // </main>
         <div className="flex text-black bg-white font-semibold w-full">
-            <div className="w-1/2 flex flex-col mt-10 min-h-screen max-h-fit mb-8       ">
-                <div className="mx-auto ">
-                    <h1 className="text-center text-2xl mb-5">Add details</h1>
+            <div className="w-1/2 flex flex-col mt-5 min-h-screen max-h-fit mb-8       ">
+                <div className="mx-auto">
+                    <h1 className="text-center text-2xl mb-2">Add details</h1>
                     <div className="w-96">
-                        <h1>Name</h1>
+                        <h2 className="text-sm">Name</h2>
                         <input
                             value={text}
                             message={text}
                             onChange={textHandler}
-                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
+                            className="mb-2 w-11/12  p-1 bg-gray-200 rounded-md"
                         ></input>
-                        <h1>Contact</h1>
-                        <input
-                            value={contact}
-                            //value={contact}
-                            //message={text}
-                            onChange={contactHandler}
-                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
-                        ></input>
-                        <h1>Education</h1>
-                        <input
-                            value={education}
-                            //value={contact}
-                            //message={text}
-                            onChange={educationHandler}
-                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
-                        ></input>
-                        <h1>Projects</h1>
+                        <h2 className="text-sm">Contact</h2>
+                        <div className="flex  w-11/12 justify-between">
+                            <input
+                                value={contact}
+                                //value={contact}
+                                //message={text}
+                                onChange={contactHandler}
+                                className="mb-2 mr-2 w-1/2  p-1 bg-gray-200 rounded-md"
+                            ></input>
+                            <input
+                                value={contactTwo}
+                                //value={contact}
+                                //message={text}
+                                onChange={contactHandlerTwo}
+                                className="mb-2 w-1/2  p-1 bg-gray-200 rounded-md"
+                            ></input>
+                        </div>
+                        <h2 className="text-sm">Projects</h2>
                         <textarea
                             value={project}
                             //value={contact}
                             //message={text}
                             onChange={projectHandler}
-                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
+                            className="mb-2 w-11/12  p-1 bg-gray-200 rounded-md"
                         />
-                        <h1>Languages</h1>
+                        <h2 className="text-sm">Education</h2>
+                        <input
+                            value={education}
+                            //value={contact}
+                            //message={text}
+                            onChange={educationHandler}
+                            className="mb-2 w-11/12  p-1 bg-gray-200 rounded-md"
+                        ></input>
+                        <h2 className="text-sm">Languages</h2>
                         <input
                             value={languages}
                             //value={contact}
                             //message={text}
                             onChange={languagesHandler}
-                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
+                            className="mb-2 w-11/12 p-1 bg-gray-200 rounded-md"
                         ></input>
-                        <h1>Frameworkss</h1>
+                        <h2 className="text-sm">Frameworks</h2>
                         <input
                             value={frameworks}
                             //value={contact}
                             //message={text}
                             onChange={frameworksHandler}
-                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
+                            className="mb-2 w-11/12  p-1 bg-gray-200 rounded-md"
                         ></input>
-                        <h1>Tools</h1>
+                        <h2 className="text-sm">Tools</h2>
                         <input
                             value={tools}
                             //value={contact}
                             //message={text}
                             onChange={toolsHandler}
-                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
+                            className="mb-2 w-11/12  p-1 bg-gray-200 rounded-md"
                         ></input>
-                        <h1>experience</h1>
-                        <input
+                        <h2 className="text-sm">Experience</h2>
+                        <textarea
                             value={experience}
                             //value={contact}
                             //message={text}
                             onChange={experienceHandler}
-                            className="mb-2 w-3/4 p-1 bg-gray-200 rounded-md"
+                            className="mb-2 w-11/12  p-1 bg-gray-200 rounded-md"
+                        />
+                        <h2 className="text-sm">Links</h2>
+                        <input
+                            value={links}
+                            //value={contact}
+                            //message={text}
+                            onChange={linksHandler}
+                            className="mb-2 w-11/12  p-1 bg-gray-200 rounded-md"
                         ></input>
                     </div>
                     <Button
-                        className="w-fit mt-5"
+                        className="w-fit mt-3"
                         onClick={handler}
                         primary={true}
                     >
@@ -252,20 +280,38 @@ export default function Home(props) {
                     Primary Button
                 </Button> */}
             </div>
-            <div className="flex flex-col text-left text-black  mt-10 min-h-screen max-h-fit w-1/2">
-                <h1 className="text-center text-2xl mb-5">Resume</h1>
+            <div className="flex flex-col text-left text-black  mt-5 min-h-screen max-h-fit w-1/2">
+                <h1 className="text-center text-2xl mb-2">Resume</h1>
                 <PDFExport ref={pdfconverter} paperSize="A4" class="container">
-                    <div className="mx-6 my-5  text-sm ">
+                    <div className="mx-auto my-5 w-4/5 bg-blue-300 text-xs p-4 rounded-md text-justify">
                         <span className="">
                             <h2 className="text-2xl">{text}</h2>
-                            <h2>Contact: {contact}</h2>
+                            <h2 className="text-base mt-2">Contact:</h2>
+                            <hr className="h-1" />
+                            <h2>{contact}</h2>
+                            <h2>{contactTwo}</h2>
                         </span>
-                        <h2>Education: {education}</h2>
-                        <h2>Projects: {project}</h2>
-                        <h2>Languages: {languages}</h2>
-                        <h2>Frameworks: {frameworks}</h2>
-                        <h2>Tools: {tools}</h2>
-                        <h2>Experience: {experience}</h2>
+                        <h2 className="text-base mt-2">Projects: </h2>
+                        <hr className="h-1" />
+                        <p className="">{project}</p>
+                        <h2 className="text-base mt-2">Education:</h2>
+                        <hr className="h-1" />
+                        <span className="w-full"> {education}</span>
+                        <h2 className="text-base mt-2">Languages: </h2>
+                        <hr className="h-1" />
+                        <span>{languages}</span>
+                        <h2 className="text-base mt-2">Frameworks: </h2>
+                        <hr className="h-1" />
+                        <span>{frameworks}</span>
+                        <h2 className="text-base mt-2">Tools: </h2>
+                        <hr className="h-1" />
+                        <span>{tools}</span>
+                        <h2 className="text-base mt-2">Experience: </h2>
+                        <hr className="h-1" />
+                        <p>{experience}</p>
+                        <h2 className="text-base mt-2">Links: </h2>
+                        <hr className="h-1" />
+                        <span>{links}</span>
                         <p>lorem lafaljf ksdj i wnat to go to himalays</p>
                     </div>
                 </PDFExport>
