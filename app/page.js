@@ -7,8 +7,7 @@ import "@progress/kendo-theme-material/dist/all.css";
 import { Button } from "@progress/kendo-react-buttons";
 import { useRef, useState } from "react";
 import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
-import Resume from "./Resume/page";
-import "./page.css";
+
 
 export default function Home(props) {
     const pdfconverter = useRef(null);
@@ -194,15 +193,11 @@ export default function Home(props) {
                         <div className="flex  w-full justify-between">
                             <input
                                 value={contact}
-                                //value={contact}
-                                //message={text}
                                 onChange={contactHandler}
                                 className="mb-2 mr-2 w-1/2  p-1 bg-gray-200 rounded-md"
                             ></input>
                             <input
                                 value={contactTwo}
-                                //value={contact}
-                                //message={text}
                                 onChange={contactHandlerTwo}
                                 className="mb-2 w-1/2  p-1 bg-gray-200 rounded-md"
                             ></input>
@@ -210,24 +205,18 @@ export default function Home(props) {
                         <h2 className="text-sm">Projects</h2>
                         <textarea
                             value={project}
-                            //value={contact}
-                            //message={text}
                             onChange={projectHandler}
                             className="mb-2 w-full  p-1 bg-gray-200 rounded-md"
                         />
                         <h2 className="text-sm">Education</h2>
                         <input
                             value={education}
-                            //value={contact}
-                            //message={text}
                             onChange={educationHandler}
                             className="mb-2 w-full  p-1 bg-gray-200 rounded-md"
                         ></input>
                         <h2 className="text-sm">Languages</h2>
                         <input
                             value={languages}
-                            //value={contact}
-                            //message={text}
                             onChange={languagesHandler}
                             className="mb-2 w-full p-1 bg-gray-200 rounded-md"
                         ></input>
@@ -242,7 +231,7 @@ export default function Home(props) {
                         <h2 className="text-sm">Tools</h2>
                         <input
                             value={tools}
-                            //value={contact}
+                            //
                             //message={text}
                             onChange={toolsHandler}
                             className="mb-2 w-full  p-1 bg-gray-200 rounded-md"
@@ -294,7 +283,7 @@ export default function Home(props) {
                             <h2>{contactTwo}</h2>
                         </span>
                         <h2 className="text-base mt-2 font-medium">
-                            Projects:{" "}
+                            Projects:
                         </h2>
                         <hr className="h-1" />
                         <p className="">{project}</p>
@@ -304,12 +293,12 @@ export default function Home(props) {
                         <hr className="h-1" />
                         <span className="w-full"> {education}</span>
                         <h2 className="text-base mt-2 font-medium">
-                            Languages:{" "}
+                            Languages:
                         </h2>
                         <hr className="h-1" />
                         <span>{languages}</span>
                         <h2 className="text-base mt-2 font-medium">
-                            Frameworks:{" "}
+                            Frameworks:
                         </h2>
                         <hr className="h-1" />
                         <span>{frameworks}</span>
@@ -317,14 +306,14 @@ export default function Home(props) {
                         <hr className="h-1" />
                         <span>{tools}</span>
                         <h2 className="text-base mt-2 font-medium">
-                            Experience:{" "}
+                            Experience:
                         </h2>
                         <hr className="h-1" />
                         <p>{experience}</p>
                         <h2 className="text-base mt-2 font-medium">Links: </h2>
                         <hr className="h-1" />
                         <span>{links}</span>
-                        <p></p>
+
                     </div>
                 </PDFExport>
                 <Button
