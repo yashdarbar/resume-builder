@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { PDFViewer } from "@react-pdf/renderer";
-import MyDocument from "./MyDocument/page";
 import "@progress/kendo-theme-material/dist/all.css";
 import { Button } from "@progress/kendo-react-buttons";
 import { useRef, useState } from "react";
@@ -10,63 +9,8 @@ import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 import Link from "next/link";
 
 
-export default function Home(props) {
-    // const pdfconverter = useRef(null);
-    // const handler = (event) => {
-    //     pdfconverter.current.save();
-    // };
+export default function Home() {
 
-    // const [text, setText] = useState("");
-    // const [contact, setContact] = useState("");
-    // const [contactTwo, setContactTwo] = useState("");
-    // const [education, setEducation] = useState("");
-    // const [project, setProject] = useState("");
-    // const [languages, setLanguages] = useState("");
-    // const [tools, setTools] = useState("");
-    // const [frameworks, setFrameworks] = useState("");
-    // const [experience, setExperience] = useState("");
-    // const [links, setLinks] = useState("");
-
-    // const textHandler = (e) => {
-    //     setText(e.target.value);
-    // };
-
-    // const contactHandler = (e) => {
-    //     setContact(e.target.value);
-
-    // };
-
-    // const contactHandlerTwo = (e) => {
-    //     setContactTwo(e.target.value);
-    // };
-
-    // const educationHandler = (e) => {
-    //     setEducation(e.target.value);
-    // };
-
-    // const languagesHandler = (e) => {
-    //     setLanguages(e.target.value);
-    // };
-
-    // const projectHandler = (e) => {
-    //     setProject(e.target.value);
-    // };
-
-    // const toolsHandler = (e) => {
-    //     setTools(e.target.value);
-    // };
-
-    // const frameworksHandler = (e) => {
-    //     setFrameworks(e.target.value);
-    // };
-
-    // const experienceHandler = (e) => {
-    //     setExperience(e.target.value);
-    // };
-
-    // const linksHandler = (e) => {
-    //     setLinks(e.target.value);
-    // }
 
 
     return (
@@ -178,14 +122,11 @@ export default function Home(props) {
         //   </div>
         // </main>
         <div className="h-screen w-full flex bg-violet-400 justify-center items-center ">
-            <div className="text-xl font-semibold flex flex-col">
-                <h1>MAKE YOUR RESUME HERE! BY THE HELP OF RESUNATOR!</h1>
-                {/* <h2 className="flex justify-center p-4 bg-white text-black ">
-                    <Link href={"/Resume"}>Create Resume</Link>
-                </h2> */}
-                <Button
-                    className=" mx-auto mt-1 text-center"
-                >
+            <div className="text-2xl font-semibold flex flex-col text-black">
+                <h1>
+                    ELEVATE YOUR RESUME, ELEVATE YOUR CAREER: WELCOME TO RESUNATOR!
+                </h1>
+                <Button className=" mx-auto mt-5 text-center">
                     <Link href={"/Resume"}>Create Resume</Link>
                 </Button>
             </div>
